@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Fraunces", serif;
+  font-family: "Montserrat", sans-serif;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    background-color: #f3eae3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+    width: 50vw;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.left{
+    width: 20rem;
+    height: 30rem;
+    background: url(/images/image-product-desktop.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-top-left-radius: .5rem;
+    border-bottom-left-radius: .5rem;
+}
+
+
+.top{
+    width: 20rem;
+    height: 30rem;
+    background: url(/images/image-product-mobile.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-top-left-radius: .5rem;
+    border-top-right-radius: .5rem;
+}
+
+.right{
+    background-color: whitesmoke;
+    width: 20rem;
+    height: 30rem;
+    border-top-right-radius: .5rem;
+    border-bottom-right-radius: .5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    gap: 1rem;
+    padding: 1.9rem 2rem;
+    flex-wrap: wrap;
+}
+
+p{
+    color: hsl(228, 12%, 48%);
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    line-height: 1.3rem;
+}
+
+h1{
+    color: hsl(212, 21%, 14%);
+    font-family: "Fraunces", serif;
+    font-size: 2.2rem;
+    line-height: 2rem;
+}
+
+.price{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+#new{
+    color: hsl(158, 36%, 37%);
+    font-family: "Fraunces", serif;
+    font-size: 2rem;
+}
+
+#old{
+    color: hsl(228, 12%, 48%);
+    font-size: .8rem;
+    text-decoration: line-through;
+}
+
+.btn{
+    background-color: #3d8168;
+    color: whitesmoke;
+    padding: .8rem;
+    border-radius: 10px;
+    font-size: .9rem;
+}
+
+.btn::before{
+    content: "";
+    background: url(/images/icon-cart.svg);
+    color: whitesmoke;
+    width: 1rem;
+    height: 1rem;
+    float: inline-start;
+    transform: translateX(3.5rem);
+}
+
+button:hover{
+    background-color: #1a4031;
+    cursor: pointer;
+}
+
+@media screen and (min-width:1290px) {
+    .top{
+        display: none;
+    }
+}
+
+@media screen and (max-width:1290px) {
+    .left{
+        display: none;
+    }
+
+    .card{
+        min-width: fit-content;
+        height: 40rem;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .bottom{
+        border-top-right-radius: 0;
+        border-bottom-left-radius: .5rem;
+    }
+}
